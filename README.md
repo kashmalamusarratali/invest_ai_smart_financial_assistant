@@ -109,42 +109,33 @@ LLM never directly accesses the database
 Business logic remains deterministic
 
  # System Architecture
+ 
 User Query
+
    ↓
+   
 Gradio UI
+
    ↓
+   
 LLM Agent (Gemini)
+
    ↓ (Tool Call)
+   
 Analytics / Data Services
+
    ↓
+   
 Structured Response
+
    ↓
+   
 Text + Chart + Voice Output
 
-Project Structure
-investai/
-├── app.py                 # Gradio UI & app entry point
-├── config.py              # Environment & model configuration
-├── requirements.txt
-│
-├── llm/
-│   ├── client.py          # Gemini/OpenAI-compatible client
-│   ├── tools.py           # Tool schemas
-│   └── agent.py           # Agent loop & tool handling
-│
-├── data/
-│   ├── database.py        # SQLite initialization
-│   └── repository.py     # Data access layer
-│
-├── services/
-│   ├── stocks.py          # Stock business logic
-│   └── analytics.py      # Comparisons & sector averages
-│
-├── utils/
-│   └── charts.py          # Visualization utilities
-│
-└── tts/
-    └── voice.py           # Text-to-Speech module
+# Project Structure
+
+<img width="1060" height="1074" alt="image" src="https://github.com/user-attachments/assets/4920bfb9-4c1f-4434-81f7-2dd15490de05" />
+
 
 # Tech Stack
 Layer	Technology
